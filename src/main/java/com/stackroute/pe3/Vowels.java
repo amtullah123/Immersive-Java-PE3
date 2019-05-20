@@ -6,6 +6,7 @@ public class Vowels {
         // String str[] = {"India", "Egypt", "America", "Indonesia"};
         for (int i = 0; i < str.length; i++) {
             String s = str[i].substring(1);
+            //it replaces the vowels with space
             s = s.replaceAll("[aeiou]", "");
             str[i] = str[i].substring(0, 1) + s;
         }

@@ -8,17 +8,19 @@ public class ReversearrayTest
 {
     Reversearray af;
 
-    @Before
+    @BeforeClass
     public void setup()
     {
-        //arrenge
+        // This methods runs, before running any one of the test case
+        // This method is used to initialize the required variables
         af = new Reversearray();
     }
 
-    @After
+    @AfterClass
     public void tearDown()
     {
-        //arrenge
+        //This method runs, after running all the test cases
+            // This method is used to clear the initialized variables
         af = null;
     }
 
@@ -29,6 +31,7 @@ public class ReversearrayTest
         int[] arr = {4, 3, 7, 8};
         String[] result = af.evenOdd(arr);
         String[] expected = {"even", "odd", "odd", "even"};
+        //This method checks the actual output with expected output.
         assertArrayEquals(expected, result);
 
     }
@@ -39,6 +42,7 @@ public class ReversearrayTest
         int[] arr = {4, 3, 7, 8,4};
         int [] result = af.reversearray(arr);
         int [] expected = {4,8,7,3,4};
+        //This method checks the actual output with expected output.
         assertArrayEquals(expected, result);
 
     }
@@ -48,6 +52,7 @@ public class ReversearrayTest
         int[] arr = {3, 12, 7, 8};
         int[] result = af.removePrime(arr);
         int[] expected = {12,8};
+        //This method checks the actual output with expected output.
         assertArrayEquals(result, expected);
 
     }

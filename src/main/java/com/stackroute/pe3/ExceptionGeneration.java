@@ -11,6 +11,7 @@ public class ExceptionGeneration {
                 num[i]=5;
             }
         }
+        //it generates NegativeArraySizeException
         catch(NegativeArraySizeException e){
             result="NegativeArraySizeException";
         }
@@ -28,6 +29,7 @@ public class ExceptionGeneration {
                 num[i]=5;
             }
         }
+        //it generates IndexOutOfBoundsException
         catch(IndexOutOfBoundsException e){
             result="IndexOutOfBoundsException";
         }
@@ -43,7 +45,7 @@ public class ExceptionGeneration {
             String a=s.toUpperCase();
 
         }
-
+//it generates NullPointerException
         catch(NullPointerException e){
             result="NullPointerException";
         }

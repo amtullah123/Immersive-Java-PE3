@@ -5,6 +5,21 @@ import static org.junit.Assert.*;
 
 public class StringComparisonTest
 {
+    @BeforeClass
+    public static void setup() {
+        // This methods runs, before running any one of the test case
+        // This method is used to initialize the required variables
+        stringComparision = new StringComparision();
+
+    }
+
+    @AfterClass
+    public static void teardown() {
+        // This method runs, after running all the test cases
+        // This method is used to clear the initialized variables
+        stringComparision = null;
+
+    }
     @Test
     public void isDuplicateSameArrayTest()
     {
@@ -42,6 +57,7 @@ public class StringComparisonTest
         String[] array2 = { "f" , "g" , "h" , "i" , "j"};
         String[] actual = s.appendFirstElement(array1, array2);
         String[] expected = { "a" , "f" , "g" , "h" , "i" , "j"};
+        //This method checks the actual output with expected output.
         assertArrayEquals(expected, actual);
     }
 
@@ -53,6 +69,7 @@ public class StringComparisonTest
         String[] array2 = { "f" , "g" , "h" , "i" , "j"};
         String[] actual = s.prependMidElement(array1, array2);
         String[] expected = { "h" , "a" , "b" , "c" , "d" , "e"};
+        //This method checks the actual output with expected output.
         assertArrayEquals(expected, actual);
     }
 }
